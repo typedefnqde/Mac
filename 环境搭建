@@ -1,0 +1,2 @@
+clang, gcc等编译工具：
+  Open Xcode -> preferences -> Downloads -> install 'Command Line Tools'
