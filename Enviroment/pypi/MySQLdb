@@ -1,0 +1,16 @@
+
+$ sudo pip install MySQL-python
+遇到问题：
+1.clang 命令找不到
+    解决： 到Xcode中安装command-line-tools
+2.clang: error: unknown argument: '-multiply_definedsuppress' [-Wunused-command-line-argument-hard-error-in-future]
+clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+    解决： 忽略该错误（因为mac不认未经认证的命令）
+        $ sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future pip install MySQL-python
+
+
+参考：
+安装
+http://stackoverflow.com/questions/1448429/how-to-install-mysqldb-python-data-access-library-to-mysql-on-mac-os-x
+clang问题解决：
+https://bruteforce.gr/bypassing-clang-error-unknown-argument.html
