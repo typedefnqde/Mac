@@ -1,0 +1,6 @@
+Mac 默认截屏保存路径为桌面，由以下命令可更改为其他路径
+$ defaults write com.apple.screencapture location ~/Pictures/Screenshots
+$ killall SystemUIServer
+
+注意：
+需确保路径存在，否则找不到路径的话截屏时仍会自动保存在默认路径(桌面)下
