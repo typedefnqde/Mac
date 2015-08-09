@@ -1,0 +1,22 @@
+pip uninstall boto
+sudo pip install -U gsutil
+
+执行第二条命令时发生错误：
+    clang: error: unknown argument: '-mno-fused-madd' [-Wunused-command-line-argument-hard-error-in-future]
+    clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+    clang: error: unknown argument: '-mno-fused-madd' [-Wunused-command-line-argument-hard-error-in-future]
+    clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
+    
+        No working compiler found, or bogus compiler options
+        passed to the compiler from Python's distutils module.
+        See the error messages above.
+        (If they are about -mno-fused-madd and you are on OS/X 10.8,
+        see http://stackoverflow.com/questions/22313407/ .)
+解决:
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
+sudo -E pip install -U gsutil
+
+
+https://github.com/GoogleCloudPlatform/gsutil/issues/206
+http://stackoverflow.com/questions/22313407/clang-error-unknown-argument-mno-fused-madd-python-package-installation-fa
