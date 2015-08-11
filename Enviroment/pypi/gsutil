@@ -20,3 +20,14 @@ sudo -E pip install -U gsutil
 
 https://github.com/GoogleCloudPlatform/gsutil/issues/206
 http://stackoverflow.com/questions/22313407/clang-error-unknown-argument-mno-fused-madd-python-package-installation-fa
+
+本地认证google账户
+$ gsutil config
+按其提示逐步操作
+注意： 'project id' 不同于 ‘developer_bucket_id’
+
+使用gsutil下载csv文件
+$ gsutil cp  gs-link  local-addr
+参考：
+https://support.google.com/googleplay/android-developer/answer/6135870?p=reviews_export&rd=1#export
+$ gsutil cp gs-link local-addr
